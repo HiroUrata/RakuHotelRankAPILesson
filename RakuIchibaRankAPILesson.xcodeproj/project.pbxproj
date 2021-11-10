@@ -14,6 +14,10 @@
 		54E11033273B873600A2019E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54E11031273B873600A2019E /* Main.storyboard */; };
 		54E11035273B873900A2019E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54E11034273B873900A2019E /* Assets.xcassets */; };
 		54E11038273B873900A2019E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54E11036273B873900A2019E /* LaunchScreen.storyboard */; };
+		54E11044273B8A7900A2019E /* TableViewCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E11042273B8A7900A2019E /* TableViewCustomCell.swift */; };
+		54E11045273B8A7900A2019E /* TableViewCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54E11043273B8A7900A2019E /* TableViewCustomCell.xib */; };
+		54E11048273B940A00A2019E /* ItemDetailDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E11047273B940A00A2019E /* ItemDetailDatas.swift */; };
+		54E1104A273B946E00A2019E /* AlamofireProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E11049273B946E00A2019E /* AlamofireProcess.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		54E11034273B873900A2019E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54E11037273B873900A2019E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		54E11039273B873900A2019E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54E11042273B8A7900A2019E /* TableViewCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCustomCell.swift; sourceTree = "<group>"; };
+		54E11043273B8A7900A2019E /* TableViewCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCustomCell.xib; sourceTree = "<group>"; };
+		54E11047273B940A00A2019E /* ItemDetailDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailDatas.swift; sourceTree = "<group>"; };
+		54E11049273B946E00A2019E /* AlamofireProcess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireProcess.swift; sourceTree = "<group>"; };
 		9C6C982D46DC2B617AF1B92A /* Pods-RakuIchibaRankAPILesson.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RakuIchibaRankAPILesson.release.xcconfig"; path = "Target Support Files/Pods-RakuIchibaRankAPILesson/Pods-RakuIchibaRankAPILesson.release.xcconfig"; sourceTree = "<group>"; };
 		D3664CDD32769ACB54494462 /* Pods-RakuIchibaRankAPILesson.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RakuIchibaRankAPILesson.debug.xcconfig"; path = "Target Support Files/Pods-RakuIchibaRankAPILesson/Pods-RakuIchibaRankAPILesson.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +95,7 @@
 			children = (
 				54E11031273B873600A2019E /* Main.storyboard */,
 				54E11034273B873900A2019E /* Assets.xcassets */,
+				54E11046273B8A7E00A2019E /* TableViewCellFile */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -94,8 +103,19 @@
 		54E11041273B87C600A2019E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				54E11047273B940A00A2019E /* ItemDetailDatas.swift */,
+				54E11049273B946E00A2019E /* AlamofireProcess.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		54E11046273B8A7E00A2019E /* TableViewCellFile */ = {
+			isa = PBXGroup;
+			children = (
+				54E11042273B8A7900A2019E /* TableViewCustomCell.swift */,
+				54E11043273B8A7900A2019E /* TableViewCustomCell.xib */,
+			);
+			path = TableViewCellFile;
 			sourceTree = "<group>";
 		};
 		72BB6E90FC52E2D37C301BA4 /* Pods */ = {
@@ -177,6 +197,7 @@
 			files = (
 				54E11038273B873900A2019E /* LaunchScreen.storyboard in Resources */,
 				54E11035273B873900A2019E /* Assets.xcassets in Resources */,
+				54E11045273B8A7900A2019E /* TableViewCustomCell.xib in Resources */,
 				54E11033273B873600A2019E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,6 +253,9 @@
 			files = (
 				54E11030273B873600A2019E /* ViewController.swift in Sources */,
 				54E1102C273B873600A2019E /* AppDelegate.swift in Sources */,
+				54E11048273B940A00A2019E /* ItemDetailDatas.swift in Sources */,
+				54E11044273B8A7900A2019E /* TableViewCustomCell.swift in Sources */,
+				54E1104A273B946E00A2019E /* AlamofireProcess.swift in Sources */,
 				54E1102E273B873600A2019E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
