@@ -10,15 +10,15 @@ import SwiftyJSON
 
 class AlamofireProcess{
     
-    private var privateItemDetailArray = [ItemDetailDatas]()
+    private var privateItemDetailArray = [HotelDetailDatas]()
 }
 
 extension AlamofireProcess{
     
-    public func getItemDetailDatas(targetAge:String?,targetGender:String?,completion: @escaping ([ItemDetailDatas]?,Error?) -> Void){
+    public func getItemDetailDatas(targetGenre:String?,completion: @escaping ([HotelDetailDatas]?,Error?) -> Void){
      
-        guard let age = targetAge else { return }
-        guard let gender = targetGender else { return }
+        guard let genre = targetGenre else { return }
+
         
         let apiKey = ""
         
@@ -28,19 +28,21 @@ extension AlamofireProcess{
                 
             case .success:
                 
-                let detailData = JSON(response.result as Any)["Items"]
+                let detailData = JSON(response.result as Any)
+                print(detailData)
+                privateItemDetailArray = []
                 
-                for dataCount in 0..<detailData.count{
+                for dataCount in 0..<detailData["Rankings"].count{
                     
-                    if let getRank = detailData[dataCount]["Item"]["rank"].string,
-                       let getMediumImageUrls = detailData[dataCount]["Item"]["mediumImageUrls"]["imageUrl"].string,
-                       let getItemName = detailData[dataCount]["Item"]["itemName"].string,
-                       let getItemPrice = detailData[dataCount]["Item"]["itemPrice"].string{
+                    if let getRank = detailData["Rankings"][dataCount]["Ranking"]["rank"].string,
+                       let getHotelImageUrl = detailData["Rankings"][dataCount]["Ranking"]["hotelImageUrl"].string,
+                       let getHotelName = detailData["Rankings"][dataCount]["Ranking"]["hotelName"].string,
+                       let getMiddleClassName = detailData["Rankings"][dataCount]["Ranking"]["middleClassName"].string{
                         
-                        privateItemDetailArray.append(ItemDetailDatas(rank: getRank,
-                                                                      mediumImageUrls: getMediumImageUrls,
-                                                                      itemName: getItemName,
-                                                                      itemPrice: getItemPrice))
+                        privateItemDetailArray.append(HotelDetailDatas(rank: getRank,
+                                                                      hotelImageUrl: getHotelImageUrl,
+                                                                      hotelName: getHotelName,
+                                                                      middleClassName: getMiddleClassName))
                     }
                 
                 }
@@ -54,4 +56,5 @@ extension AlamofireProcess{
         
     }
 }
+
 

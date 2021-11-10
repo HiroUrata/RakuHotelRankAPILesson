@@ -5,10 +5,10 @@
 //  Created by UrataHiroki on 2021/11/10.
 //
 
-struct ItemDetailDatas{
+struct HotelDetailDatas{
     
     let rank:String?
-    let mediumImageUrls:String?
-    let itemName:String?
-    let itemPrice:String?
+    let hotelImageUrl:String?
+    let hotelName:String?
+    let middleClassName:String?
 }

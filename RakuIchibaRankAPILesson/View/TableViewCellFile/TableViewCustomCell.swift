@@ -10,9 +10,10 @@ import UIKit
 class TableViewCustomCell: UITableViewCell {
 
     @IBOutlet weak var rankLabel: UILabel!
-    @IBOutlet weak var mediumImageView: UIImageView!
-    @IBOutlet weak var itemNameLabel: UILabel!
-    @IBOutlet weak var itemPriceLabel: UILabel!
+    @IBOutlet weak var hotelImageView: UIImageView!
+    @IBOutlet weak var hotelNameLabel: UILabel!
+    @IBOutlet weak var middleClassNameLabel: UILabel!
+    
     
     
     override func awakeFromNib() {
@@ -35,8 +36,8 @@ class TableViewCustomCell: UITableViewCell {
         super.prepareForReuse()
         
         rankLabel.text = ""
-        mediumImageView.image = UIImage(named: "")
-        itemNameLabel.text = ""
-        itemPriceLabel.text = ""
+        hotelImageView.image = UIImage(named: "")
+        hotelNameLabel.text = ""
+        middleClassNameLabel.text = ""
     }
 }
