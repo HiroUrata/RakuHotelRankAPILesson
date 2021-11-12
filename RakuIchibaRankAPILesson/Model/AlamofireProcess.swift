@@ -28,18 +28,18 @@ extension AlamofireProcess{
                 
             case .success:
                 
-                let detailData = JSON(response.result as Any)
-                print(detailData)
+                let detailData = JSON(response.data as Any)
                 privateItemDetailArray = []
-                
-                for dataCount in 0..<detailData["Rankings"].count{
+                                
+                for dataCount in 0...detailData["Rankings"][0]["Ranking"]["hotels"].count - 1{
                     
-                    if let getRank = detailData["Rankings"][dataCount]["Ranking"]["rank"].string,
-                       let getHotelImageUrl = detailData["Rankings"][dataCount]["Ranking"]["hotelImageUrl"].string,
-                       let getHotelName = detailData["Rankings"][dataCount]["Ranking"]["hotelName"].string,
-                       let getMiddleClassName = detailData["Rankings"][dataCount]["Ranking"]["middleClassName"].string{
+                    if let getRank = detailData["Rankings"][0]["Ranking"]["hotels"][dataCount]["hotel"]["rank"].int,
+                       let getHotelImageUrl = detailData["Rankings"][0]["Ranking"]["hotels"][dataCount]["hotel"]["hotelImageUrl"].string,
+                       let getHotelName = detailData["Rankings"][0]["Ranking"]["hotels"][dataCount]["hotel"]["hotelName"].string,
+                       let getMiddleClassName = detailData["Rankings"][0]["Ranking"]["hotels"][dataCount]["hotel"]["middleClassName"].string{
                         
-                        privateItemDetailArray.append(HotelDetailDatas(rank: getRank,
+                        
+                        privateItemDetailArray.append(HotelDetailDatas(rank:getRank,
                                                                       hotelImageUrl: getHotelImageUrl,
                                                                       hotelName: getHotelName,
                                                                       middleClassName: getMiddleClassName))

@@ -7,7 +7,7 @@
 
 struct HotelDetailDatas{
     
-    let rank:String?
+    let rank:Int?
     let hotelImageUrl:String?
     let hotelName:String?
     let middleClassName:String?

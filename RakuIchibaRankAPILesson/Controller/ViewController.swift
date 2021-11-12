@@ -53,7 +53,7 @@ extension ViewController:UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        return tableView.frame.height / 2.5
+        return tableView.frame.height / 3.4
     }
 }
 
@@ -68,7 +68,7 @@ extension ViewController:UITableViewDataSource{
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "ItemDetailCell", for: indexPath) as! TableViewCustomCell
         
-        cell.rankLabel.text = "\(cellContentsArray[indexPath.row].rank ?? "読み込みエラー")位"
+        cell.rankLabel.text = "\(String(cellContentsArray[indexPath.row].rank!))位"
         cell.hotelImageView.sd_setImage(with: URL(string: cellContentsArray[indexPath.row].hotelImageUrl!), completed: nil)
         cell.hotelNameLabel.text = cellContentsArray[indexPath.row].hotelName
         cell.middleClassNameLabel.text = cellContentsArray[indexPath.row].middleClassName
